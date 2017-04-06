@@ -1,11 +1,48 @@
 <html>
 <head>
+  <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="animations.css">
   <script src="bower_components\angular\angular.js"></script>
   <script src="bower_components\angular-ui-router\release\angular-ui-router.js"></script>
-</head>
-<body>
-<div class="container">
+  <script src="bower_components\angular-animate\angular-animate.js"></script>
+  <script src="bower_components\angular-bootstrap\ui-bootstrap.js"></script>
 
-</div>
+  <script src='app.config.js'></script>
+  <script src="customers/customers.controller.js"></script>
+  <script src="customers\customers.service.js"></script>
+  <script src="customers\customers.filter.js"></script>
+  <script src="customers\gridComponent\grid.component.js"></script>
+  <script src="customers\listComponent\list.component.js"></script>
+  <script src="orders\orders.controller.js"></script>
+  <script src="orders\orders.factory.js"></script>
+  <script src="customerOrdersComponent\customerOrders.component.js"></script>
+  <script src="customerOrders\customerOrders.controller.js"></script>
+  <script src="editCustomer\editDetails.controller.js"></script>
+  <script src="animations.js"></script>
+</head>
+<body ng-app="cmApp">
+
+  <div class="container">
+
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <img ng-src="images\people.png" class="pull-left"/>
+        <span class="navbar-brand">Customers manager</span>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a ui-sref="customers" class=""><b>customers</b></a>
+        </li>
+        <li>
+          <a ui-sref="orders" class=""><b>orders</b></a>
+        </li>
+      </ul>
+    </nav>
+
+  <div ui-view class="animate-fade" ng-animate-children ></div>
+
+  </div>
+
 </body>
 </html>

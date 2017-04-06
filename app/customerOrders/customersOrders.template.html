@@ -1,0 +1,7 @@
+<h2> <span class="glyphicon glyphicon-folder-open"></span> Customer orders</h2>
+<br/>
+<h3> Orders for: <a href="" ng-click="ctrl.changeState('editDetails',customer)">{{customer.name}}</a></h3>
+<p>
+  Address: {{customer.location}}
+</p>
+<customer-orders orders="customer.orders"></customer-orders>

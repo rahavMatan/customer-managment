@@ -1,0 +1,15 @@
+<div>
+
+<h2> <span class="glyphicon glyphicon-folder-open"></span> All customers orders</h2>
+  <p>
+    <b>Filter by: Name/Product:</b>
+    <input type="text" ng-model="ctrl.searchParam"/>
+  </p>
+  <div ng-repeat="customer in customers.slice((currentPage-1)*itemsPerPage,currentPage*itemsPerPage)">
+    <a><h3>{{customer.name}}</h3></a>
+    <customer-orders orders="customer.orders"></customer-orders>
+  </div>
+  <ul uib-pagination total-items="customers.length" ng-model="currentPage"
+              ng-change="pageChanged()" items-per-page="itemsPerPage"
+              template-url="bower_components\angular-ui-bootstrap\template\pagination\pagination.html"></ul>
+</div>

@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+  <button class="btn close cardClose" title="Delete Customer" ng-click="$ctrl.deleteCustomer({customer:$ctrl.customer,event:$event})">&times;</button>
+  <div class="panel-heading">
+    <a class="gridCell-link" href="" ng-click="$ctrl.changeState({state:'editDetails'},{customer:$ctrl.customer})"><h3 class="panel-title">{{$ctrl.customer.name}}</h3></a>
+  </div>
+  <div class="panel-body">
+    <div class="pull-left">
+      <a class="white"><img ng-src="{{$ctrl.customer.image}}" class="cardImage" /></a>
+    </div>
+    <div class="pull-left cardBodyRight">
+       <div class="cardBodyContent">
+         {{$ctrl.customer.location}}
+       </div>
+       <div>
+         <a ng-click="$ctrl.changeState({state:'customerOrders'},{customer:$ctrl.customer})" href="">
+           {{$ctrl.customer.orders.length}} Order<span ng-if="$ctrl.customer.orders.length!=1">s</span>
+         </a>
+       </div>
+    </div>
+  </div>
+</div>

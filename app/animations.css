@@ -1,0 +1,38 @@
+.animate-fade.ng-animate {
+
+}
+
+.animate-fade.ng-leave.ng-leave-active,
+.animate-fade.ng-enter {
+  transition:0.2s linear opacity;
+  opacity: 0;
+}
+
+.animate-fade.ng-leave,
+.animate-fade.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+
+.orders-list.ng-enter
+ {
+  transition:1s linear all;
+  transform:translateX(-500px);
+
+}
+.orders-list.ng-leave-active,
+.orders-list.ng-enter {
+
+}
+.orders-list.ng-enter-active,
+.orders-list.ng-leave {
+  transform:translateX(0);
+}
+.scale{
+  transition: width 1s ease-in-out;
+  width:0%;
+}
+@keyframes example {
+    from {width:auto;}
+    to {width:50%;}
+}

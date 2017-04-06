@@ -1,0 +1,43 @@
+<div class="form-container">
+
+<form class="form-horizontal">
+  <div class="form-group">
+  <div class="col-md-1"></div><h2 class="col-sm-4"><i class="glyphicon glyphicon-edit"></i> Add customer</h2>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" ng-model="newCustomer.name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Location</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" ng-model="newCustomer.location">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" ng-model="newCustomer.email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Gender</label>
+    <div class="radio col-sm-7">
+      <label><input type="radio" ng-model="newCustomer.gender" value="male" >Male</label>
+    </div>
+    <div class="radio col-sm-offset-2 col-sm-7">
+      <label><input type="radio" ng-model="newCustomer.gender" value="female">Female</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2">
+      <button type="submit" class="btn btn-info" ng-click="ctrl.addCustomer(newCustomer)">Update</button> <button type="submit" class=" btn btn-danger">Clear</button>
+    </div>
+  </div>
+
+
+</form>
+
+</div>

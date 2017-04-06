@@ -1,0 +1,53 @@
+<table class="table table-bordered table-striped">
+  <tr class="row info">
+      <th class="col-md-3">
+        Product
+      </th>
+      <th class="col-md-3">
+        Date
+      </th >
+      <th class="col-md-2">
+        Quantity
+      </th>
+      <th class="col-md-2">
+        Unit price
+      </th>
+      <th class="col-md-2">
+        Total
+      </th>
+  </tr>
+  <tr ng-repeat="order in $ctrl.orders" class="row">
+    <td class="col-md-3">
+      {{order.name}}
+    </td>
+    <td class="col-md-3">
+      {{order.date | date:"MM/dd/yyyy" }}
+    </td>
+    <td class="col-md-2">
+      {{order.quantity}}
+    </td>
+    <td class="col-md-2">
+      {{order.price | currency}}
+    </td>
+    <td class="col-md-2">
+      {{order.total | currency}}
+    </td>
+  </tr>
+  <tr class="row">
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td class="col-md-2 col-md-offset-4">
+      <b>{{$ctrl.total |currency}}</b>
+    </td>
+  </tr>
+</table>
